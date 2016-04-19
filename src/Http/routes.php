@@ -16,5 +16,5 @@ Route::post('/telegram-bot/{token}', function (Request $request) {
         );
     }
 
-    app('bot')->handle(new Update($update_data));
+    app('Bot')->handle(new Update($update_data));
 });
