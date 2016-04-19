@@ -2,8 +2,8 @@
 
 namespace korchasa\LaravelTelegramBot\Console\Commands;
 
+use App\Bot;
 use Illuminate\Console\Command;
-use korchasa\Telegram\Telegram;
 
 class BotStop extends Command
 {
@@ -28,7 +28,8 @@ class BotStop extends Command
      */
     public function handle()
     {
-        $telegram = new Telegram(env('TELEGRAM_BOT_TOKEN'));
-        $telegram->setWebhook('');
+        /** @var Bot $bot */
+        $bot = app('Bot');
+        $bot->getTelegram()->setWebhook('');
     }
 }
