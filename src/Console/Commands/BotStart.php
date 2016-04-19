@@ -18,6 +18,8 @@ class BotStart extends Command
     {
         /** @var Bot $bot */
         $bot = app('Bot');
-        $bot->getTelegram()->setWebhook(URL::to('/bot/'.env('APP_KEY')));
+        $bot->getTelegram()->setWebhook(
+            URL::to('/bot/'.config('telegram-bot.callback_token'))
+        );
     }
 }
