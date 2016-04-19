@@ -1,5 +1,7 @@
 {
     "name": "korchasa/laravel-telegram-bot",
+	"description": "Telegram bot",
+	"license": "MIT",
     "authors": [
         {
             "name": "korchasa",
@@ -7,7 +9,7 @@
         }
     ],
     "require": {
-        "korchasa/telegram-php": "dev-master",
+        "korchasa/telegram-php": "0.0.1",
         "yohang/finite": "^1.1",
         "laravel/framework": "^5.0"
     },
