@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46957595923324d532359af0e8e07487",
-    "content-hash": "872d01c56bd5f816882dc42580e239ad",
+    "hash": "ff1e3fc832d5e80ff53863b450b71e0c",
+    "content-hash": "fdbdf0d90a3c3315534573bf9caafe86",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -479,20 +479,24 @@
         },
         {
             "name": "korchasa/telegram-php",
-            "version": "0.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/korchasa/telegram-php.git",
-                "reference": "cb3b4b1b8358583ae7cfddd0a5e264cb29dfdab9"
+                "reference": "69a9b67b787ee2be992b158ba33d4c0ea695acd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/korchasa/telegram-php/zipball/cb3b4b1b8358583ae7cfddd0a5e264cb29dfdab9",
-                "reference": "cb3b4b1b8358583ae7cfddd0a5e264cb29dfdab9",
+                "url": "https://api.github.com/repos/korchasa/telegram-php/zipball/69a9b67b787ee2be992b158ba33d4c0ea695acd8",
+                "reference": "69a9b67b787ee2be992b158ba33d4c0ea695acd8",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.1"
+                "guzzlehttp/guzzle": "^6.2"
+            },
+            "require-dev": {
+                "monolog/monolog": "^1.19",
+                "phpunit/phpunit": "^5.3"
             },
             "suggest": {
                 "monolog/monolog": "Per request logging in specified file"
@@ -516,7 +520,7 @@
                     "email": "korchasa@gmail.com"
                 }
             ],
-            "time": "2016-03-21 00:28:06"
+            "time": "2016-04-17 19:44:11"
         },
         {
             "name": "laravel/framework",
@@ -2228,7 +2232,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "korchasa/telegram-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

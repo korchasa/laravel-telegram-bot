@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "korchasa/telegram-php": "0.0.1",
+	    "korchasa/telegram-php": "dev-master",
         "yohang/finite": "^1.1",
         "laravel/framework": "^5.0"
     },
