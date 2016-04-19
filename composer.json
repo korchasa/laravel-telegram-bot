@@ -1,0 +1,19 @@
+{
+    "name": "korchasa/laravel-telegram-bot",
+    "authors": [
+        {
+            "name": "korchasa",
+            "email": "korchasa@gmail.com"
+        }
+    ],
+    "require": {
+        "korchasa/telegram-php": "dev-master",
+        "yohang/finite": "^1.1",
+        "laravel/framework": "^5.0"
+    },
+	"autoload": {
+		"psr-4": {
+			"korchasa\\LaravelTelegramBot\\": "src/"
+		}
+	}
+}
