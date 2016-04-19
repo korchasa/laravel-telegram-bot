@@ -1,24 +1,13 @@
 <?php
 
 use Illuminate\Http\Request;
-use korchasa\Telegram\Botan;
-use korchasa\Telegram\Telegram;
 use korchasa\Telegram\Update;
 
 Route::post('/telegram-bot/{token}', function (Request $request) {
 
-    $config = config('telegram-bot');
-
-    if ($request->get('token') === $config['callback_token']) {
-        abort(404);
+    if ($request->get('token') === config('telegram-bot.callback_token')) {
+        abort(403);
     }
-
-    $bot_class = $config['bot_class'];
-
-    $bot = new $bot_class(
-        new Telegram($config['token']),
-        new Botan($config['botan_token'])
-    );
 
     $update_data = json_decode($request->getContent());
     if (false === $update_data) {
@@ -27,5 +16,5 @@ Route::post('/telegram-bot/{token}', function (Request $request) {
         );
     }
 
-    $bot->handle(new Update($update_data));
+    app('bot')->handle(new Update($update_data));
 });
