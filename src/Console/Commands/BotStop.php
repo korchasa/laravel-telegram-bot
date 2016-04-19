@@ -28,7 +28,7 @@ class BotStop extends Command
      */
     public function handle()
     {
-        $telegram = new Telegram(env('BOT_TELEGRAM_TOKEN'));
+        $telegram = new Telegram(env('TELEGRAM_BOT_TOKEN'));
         $telegram->setWebhook('');
     }
 }
